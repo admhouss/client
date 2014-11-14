@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/inscrit.js"></script>
+        <title>Inscription</title>
+    </head>
+     <body background="img/back13.png">
+        <div data-role="page" id="page1">
+  <div class="header" id="header" data-theme="a" data-role="header">
+  <center> <h3 style=";color:#37A5DB;font-size:35px;">Inscription</h3></center>
+  </div>
+   
+   <div id="wrapper">
+ <form action="" name="myForm">
+ 
+  <div data-role="content">
+  
+  <center>
+  <table border="0" >
+  <tr><div class="fcin" data-role="fieldcontain">
+ <td>   <label for="fcin" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> Cin * </label></td><td>  <input name="fcin" id="fcin" placeholder="entrer votre cin" value="" data-mini="true" type="text">
+  </td> </div></tr>
+   <tr><div class="fname" data-role="fieldcontain">
+    <td><label for="fname" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> Prénom  * </label></td><td>  <input name="fname" id="fname" placeholder="entrer votre prénom" value="" data-mini="true" type="text">
+   </td></div></tr>
+   <tr><div class="lname" data-role="fieldcontain">
+    <td><label for="lname" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> Nom           * </label> </td><td><input name="lname" id="lname" placeholder="entrer votre nom " value="" type="text">
+   </td></div></tr>
+   <tr><div class="age" data-role="fieldcontain">
+    <td><label for="age" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> Age         * </label> </td>
+  <td>  <input name="age" id="age" placeholder="entrer votre  age" value="" type="number">
+   </td></div>
+   </tr>
+    <tr><div class="tel" data-role="fieldcontain">
+    <td><label for="tel" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> Numero téléphone  * </label> 
+    </td><td><input name="tel" id="tel" placeholder="entrer votre  numero téléphone" value="" type="number">
+   </td></div>
+   </tr>
+     <tr><div class="adress" data-role="fieldcontain">
+    <td><label for="adress" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> Adress    * </label></td> <td><input name="adress" id="adress" placeholder="entrer votre adress " value="" type="text">
+</td>   </div>
+   </tr>
+   <tr><div class="code" data-role="fieldcontain">
+    <td><label for="code" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> code postal   *</label> 
+    </td><td><input name="code" id="code" placeholder="entrer votre  code postal" value="" type="number">
+   </td></div>
+   </tr>
+   <tr><div class="email" data-role="fieldcontain">
+   <td> <label for="email" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px"> Email   * </label> 
+   </td><td><input  pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"  name="email" id="email" placeholder="entrer votre email " value="" type="text"></td>
+   </div>
+   </tr>
+   <tr><div class="username" data-role="fieldcontain">
+    <td><label for="username" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px" > Login   * </label> 
+   </td><td> <input name="username" id="username" placeholder="enter username" value="" type="text">
+   </td></div></tr>
+   <tr><div class="psw" data-role="fieldcontain">
+    <td><label for="psw" style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px" > Mot de passe   *</label>
+    </td><td> <input name="password" id="psw"
+   type="password"
+     placeholder="entrer mot de passe" value="" type="text">
+   </td></div>
+</tr>
+   <tr><td></td><td><input style="size:18; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:18px;background-color:#E1F0EF;color:#37A5DB" id="register" value="Enregistrer" type="button" name="Enregistrer" onclick="validation();">
+  </td></div>
+</tr>
+</table>
+  </form>
+  </div>
+ </div>
+ 
+ <script type="text/javascript">
+  function validation() {
+    
+   if (document.myForm.fname.value == "") {
+    alert("Entrer prenom.");
+    document.myForm.fname.focus(); 
+	
+   } else if (document.myForm.fcin.value == "") {
+    alert("Entrer  votre cin.");
+    document.myForm.fcin.focus();
+	
+	 } else if (document.myForm.lname.value == "") {
+    alert("Entrer  votre nom.");
+    document.myForm.lname.focus();
+   } else if (document.myForm.age.value == "") {
+    alert(" Entrer age.");
+    document.myForm.age.focus();
+	
+	 } else if (document.myForm.tel.value == "") {
+    alert(" Entrer telephone.");
+    document.myForm.tel.focus();
+	
+	 } else if (document.myForm.adress.value == "") {
+    alert(" Entrer adress.");
+    document.myForm.adress.focus();
+	
+	} else if (document.myForm.code.value == "") {
+    alert(" Entrer code postal.");
+    document.myForm.code.focus();
+	} else if (document.myForm.email.value == "") {
+    alert(" Entrer email.");
+    document.myForm.email.focus();
+	
+   } else if (document.myForm.username.value == "") {
+    alert("Entrer  login.");
+    document.myForm.username.focus();
+   }
+   else if (document.myForm.psw.value == "") {
+    alert("Entrer mot de passe");
+    document.myForm.psw.focus();
+   }
+   else
+    {
+      success();
+    }
+  }
+   
+  function success(){
+   onDeviceReady();
+  }
+ </script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

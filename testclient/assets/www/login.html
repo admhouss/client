@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+      
+            <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+           <script type="text/javascript" src="js/login.js"></script>
+
+        <title>Inscription</title>
+    </head>
+    <body background="img/back13.png">
+<!-- Home -->
+  
+ <div data-role="page" id="page1">
+  <div id="header" data-theme="b" data-role="header">
+
+  </div>
+<center>
+
+   <div id="wrapper" style="width:450px;top:25%;position:absolute;left:1%;">
+     <center> <h3 style=";color:#37A5DB;font-size:35px;">Authentification</h3></center>
+   <form action="" name="mylogin">
+   <center>
+   <table border="0" >
+  <div data-role="content">
+  <tr> <div class="username" data-role="fieldcontain">
+   <td> <label for="username" style="font-size:24px;color:#37A5DB"> Login </label> </td><td><input  style="font-size:23px;width:250" name="username"id="username" placeholder="entrer login " value="" type="text"></td>
+   </div></tr>
+  <tr> <div class="psw" data-role="fieldcontain">
+    <td><label for="psw" style="font-size:24px;color:#37A5DB" > Mot de passe </label> </td><td><input  style="font-size:23px;width:250" name="password" id="psw"
+     placeholder="entrer votre password" value="" type="password"></td>
+   </div></tr>
+    <tr><td></td><td><input style="font-size:23px;width:295px;background-color:#E1F0EF;color:#37A5DB" id="login" value="Login" type="button" name="Login" onclick="validation();">
+  </td>
+  </div>
+  
+  </tr>
+  <tr><td></td>
+  <td><input style="font-size:23px;width:295px;background-color:#E1F0EF;color:#37A5DB" id="inscrit" value="Inscrit" type="button" name="Inscrit" onclick="navigate();"></td>
+  </tr>
+  </table>
+  </center>
+  </form>
+  </div>
+  </center>
+ </div>
+ 
+<script type="text/javascript">
+ function validation(){
+ 
+  if (document.mylogin.username.value == "") {
+   alert("Entrer  votre login.");
+   document.mylogin.username.focus(); 
+  } else if (document.mylogin.psw.value == "") {
+   alert("Entrer  mot de passe.");
+   document.mylogin.psw.focus();
+  }
+  else
+   {
+     success();
+   }
+ }
+  
+ function success(){
+  onDeviceReady();
+ }
+ 
+ 
+  function navigate()
+             {
+                window.location = "inscrit.html";
+             }
+</script>
+       
+    </body>
+</html>
